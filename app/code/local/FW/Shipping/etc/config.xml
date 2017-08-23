@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <FW_Shipping>
+            <version>0.1.0</version>
+        </FW_Shipping>
+    </modules>
+    <global>
+        <models>
+            <fw_shipping>
+                <class>FW_Shipping_Model</class>
+            </fw_shipping>
+        </models>
+    </global>
+    <default>
+		<carriers>
+	      <fwshipping>
+	           <active>1</active>
+	           <model>fw_shipping/carrier_fwmedia_shipping</model>
+	           <title>Shipping</title>
+	           <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+	           <free_product_types>15,17,19,22</free_product_types>
+	      </fwshipping>
+	      
+	      <fwshipping_free>
+	           <active>0</active>
+	           <model>fw_shipping/carrier_fwmedia_freeshipping</model>
+	           <title>Shipping</title>
+	           <name>Standard Free to US (No Exclusions)</name>
+	           <free_shipping_subtotal>0.00</free_shipping_subtotal>
+	           <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>
+	           <specificcountry>US</specificcountry>
+	      </fwshipping_free>
+
+			<zirconshipping>
+				<active>1</active>
+				<model>fw_shipping/carrier_zircon_shipping</model>
+                <title>Shipping</title>
+				<tablerate_label>Standard Shipping</tablerate_label>
+				<tablerate_code>PD</tablerate_code>
+
+                <canada_markup>9.00</canada_markup>
+                <international_markup>15.00</international_markup>
+
+				<upsground_label>UPS Ground</upsground_label>
+				<upsground_code>GND</upsground_code>
+				<upsground_markup>6.00</upsground_markup>
+				<upsground_allowed_countries>US</upsground_allowed_countries>
+
+				<ups2day_label>UPS 2nd Day</ups2day_label>
+				<ups2day_code>2D</ups2day_code>
+				<ups2day_markup>12.00</ups2day_markup>
+				<ups2day_allowed_countries>US</ups2day_allowed_countries>
+
+                <upsnextday_label>UPS Next Day</upsnextday_label>
+                <upsnextday_code>ND</upsnextday_code>
+                <upsnextday_markup>20.00</upsnextday_markup>
+                <upsnextday_allowed_countries>US</upsnextday_allowed_countries>
+
+            </zirconshipping>
+	     </carriers>
+    </default>
+</config>

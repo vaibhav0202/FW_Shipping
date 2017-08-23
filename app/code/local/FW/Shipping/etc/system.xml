@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <carriers>
+            <groups>
+                <fwshipping translate="label" module="shipping">
+                    <label>F+W Media Shipping</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        
+                        <allowed_methods translate="label">
+                            <label>Allowed Methods</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>fw_shipping/carrier_fwmedia_source_method</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>0</can_be_empty>
+                        </allowed_methods>
+                        
+                        <free_product_types translate="label">
+                            <label>Non shippable product types</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>fw_shipping/vistaeditiontype_source_option</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>                        
+                        </free_product_types>
+                        
+                        <specificerrmsg translate="label">
+                            <label>Displayed Error Message</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </specificerrmsg>
+					</fields>                    
+                </fwshipping> 
+               <fwshipping_free translate="label" module="shipping">
+                    <label>F+W Media Free Shipping (No Exclusions)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <name translate="label">
+                            <label>Method Name</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name>                    
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+
+                        <specificerrmsg translate="label">
+                            <label>Displayed Error Message</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </specificerrmsg>
+                        <free_shipping_subtotal translate="label">
+                            <label>Minimum Order Amount</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </free_shipping_subtotal>
+                        <specificcountry translate="label">
+                            <frontend_type>hidden</frontend_type>
+                            <can_be_empty>0</can_be_empty>
+                        </specificcountry>
+                    </fields>
+                </fwshipping_free>
+                <zirconshipping translate="label" module="shipping">
+                    <label>F+W Zircon Shipping</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+
+                        <title translate="label">
+                            <label>Carrier Title</label>
+                            <comment>Carrier Title</comment>
+                            <tooltip>Carrier Title</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+
+                        <tablerate_label translate="label tooltip comment">
+                            <label>Table Rate Label</label>
+                            <comment>Table Rate Label</comment>
+                            <tooltip>Table Rate Label</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>250</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </tablerate_label>
+
+                        <tablerate_code translate="label tooltip comment">
+                            <label>Table Rate Zircon Code</label>
+                            <comment>Table Rate Code</comment>
+                            <tooltip>Table Rate Code Sent to Zircon</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>350</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </tablerate_code>
+
+                        <canada_markup translate="label tooltip comment">
+                            <label>Standard Canada Markup</label>
+                            <comment>Standard Canada Markup</comment>
+                            <tooltip>The amount to markup the table rate shipping destination is Canada</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>360</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </canada_markup>
+
+                        <international_markup translate="label tooltip comment">
+                            <label>Standard International Markup</label>
+                            <comment>Standard International Markup</comment>
+                            <tooltip>The amount to markup the table rate shipping destination is outside US and CA</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>360</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </international_markup>
+
+                        <upsground_label translate="label tooltip comment">
+                            <label>UPS Ground Label</label>
+                            <comment>UPS Ground Label</comment>
+                            <tooltip>UPS Ground Label</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>450</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </upsground_label>
+
+                        <upsground_code translate="label tooltip comment">
+                            <label>UPS Ground Zircon Code</label>
+                            <comment>UPS Ground Zircon Code</comment>
+                            <tooltip>UPS Ground Code sent to Zircon</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>460</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </upsground_code>
+
+                        <upsground_markup translate="label tooltip comment">
+                            <label>UPS Ground Markup</label>
+                            <comment>UPS Ground Markup</comment>
+                            <tooltip>The amount to markup the table rate shipping if this method is selected</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>470</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </upsground_markup>
+
+                        <upsground_allowed_countries translate="label">
+                            <label>UPS Ground Allowed Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>580</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </upsground_allowed_countries>
+
+                        <ups2day_label translate="label tooltip comment">
+                            <label>UPS 2nd Day Label</label>
+                            <comment>UPS 2nd Day Label</comment>
+                            <tooltip>UPS 2nd Day Label</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>550</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ups2day_label>
+
+
+                        <ups2day_code translate="label tooltip comment">
+                            <label>UPS 2nd Day Zircon Code</label>
+                            <comment>UPS 2nd Day Zircon Code</comment>
+                            <tooltip>UPS 2nd Day Code sent to Zircon</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>560</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ups2day_code>
+
+                        <ups2day_markup translate="label tooltip comment">
+                            <label>UPS 2nd Day Markup</label>
+                            <comment>UPS 2nd Day Markup</comment>
+                            <tooltip>The amount to markup the table rate shipping if this method is selected</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>570</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </ups2day_markup>
+
+                        <ups2day_allowed_countries translate="label">
+                            <label>UPS 2nd Day Allowed Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>580</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </ups2day_allowed_countries>
+
+                        <upsnextday_code translate="label tooltip comment">
+                            <label>UPS Next Day Zircon Code</label>
+                            <comment>UPS Next Day Zircon Code</comment>
+                            <tooltip>UPS Next Day Code sent to Zircon</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>560</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </upsnextday_code>
+
+                        <upsnextday_markup translate="label tooltip comment">
+                            <label>UPS Next Day Markup</label>
+                            <comment>UPS Next Day Markup</comment>
+                            <tooltip>The amount to markup the table rate shipping if this method is selected</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>570</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </upsnextday_markup>
+
+                        <upsnextday_allowed_countries translate="label">
+                            <label>UPS Next Day Allowed Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>580</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </upsnextday_allowed_countries>
+
+                        <specificerrmsg translate="label">
+                            <label>Displayed Error Message</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>650</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </specificerrmsg>
+                    </fields>
+                </zirconshipping>
+
+            </groups>
+        </carriers>
+    </sections>
+</config>
